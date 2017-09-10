@@ -1,0 +1,4 @@
+﻿  ImageUsage.cpp
+c:\users\adil\documents\visual studio 2015\projects\opencvtest\opencvtest\image.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  OpencvTest.vcxproj -> C:\Users\Adil\documents\visual studio 2015\Projects\OpencvTest\x64\Debug\OpencvTest.exe
+  OpencvTest.vcxproj -> C:\Users\Adil\documents\visual studio 2015\Projects\OpencvTest\x64\Debug\OpencvTest.pdb (Full PDB)
