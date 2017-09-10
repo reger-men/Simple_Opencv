@@ -114,7 +114,8 @@ build_install_OCV()
 {
     #get the source directory
     BUILD_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
+    BUILD_DIR="$BUILD_DIR/opencv-3.2.0/build"
+    
     CMDS=("cd opencv-3.2.0/"
           "mkdir build"
 	  "cd build/"    
