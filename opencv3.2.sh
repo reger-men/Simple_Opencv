@@ -94,8 +94,7 @@ prompt_for_action()
 
 checkinstall()
 {
-    CMDS=("apt-get install checkinstall"
-	  "checkinstall")
+    CMDS=("apt-get install checkinstall")
 
     for cmd in "${CMDS[@]}"; do
         echo $cmd
