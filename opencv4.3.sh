@@ -115,7 +115,7 @@ build_install_OCV()
     BUILD_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
     BUILD_DIR="$BUILD_DIR/$OCV_VERSION/build"
     
-    CMDS=("cd $OCV_VERSION/"
+    CMDS=("cd opencv-$OCV_VERSION/"
           "mkdir -p build"
 	  "cd build/"    
 	  "cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D FORCE_VTK=ON -D WITH_TBB=ON -D WITH_V4L=ON -D WITH_QT=ON -D WITH_OPENGL=ON -D WITH_CUBLAS=ON -D CUDA_NVCC_FLAGS=\"-D_FORCE_INLINES\" -D WITH_GDAL=ON -D WITH_XINE=ON -D BUILD_EXAMPLES=ON .."
