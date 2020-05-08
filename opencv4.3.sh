@@ -1,12 +1,11 @@
 #!/bin/bash
 
-RELEASE_NUM="3.2"
 EXIT_FAILURE=1
-OCV_PATH=https://github.com/opencv/opencv/archive/3.2.0.zip
+OCV_PATH=https://github.com/opencv/opencv/archive/4.3.0.zip
 PKGS=
 DISTRO=
 UBUNTU_VERSION=
-
+OCV_VERSION="4.3.0"
 
 #install the dependencies in Ubuntu 16.04
 install_prerequisites_ubuntu()
@@ -114,9 +113,9 @@ build_install_OCV()
 {
     #get the source directory
     BUILD_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-    BUILD_DIR="$BUILD_DIR/opencv-3.2.0/build"
+    BUILD_DIR="$BUILD_DIR/$OCV_VERSION/build"
     
-    CMDS=("cd opencv-3.2.0/"
+    CMDS=("cd $OCV_VERSION/"
           "mkdir -p build"
 	  "cd build/"    
 	  "cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D FORCE_VTK=ON -D WITH_TBB=ON -D WITH_V4L=ON -D WITH_QT=ON -D WITH_OPENGL=ON -D WITH_CUBLAS=ON -D CUDA_NVCC_FLAGS=\"-D_FORCE_INLINES\" -D WITH_GDAL=ON -D WITH_XINE=ON -D BUILD_EXAMPLES=ON .."
@@ -144,7 +143,7 @@ build_install_OCV()
 download_OCV()
 {
     wget -nc $OCV_PATH
-    unzip 3.2.0.zip
+    unzip $OCV_VERSION.zip
 }
 
 
